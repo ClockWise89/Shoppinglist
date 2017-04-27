@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11B312C6C8D4906AEED9678A /* Pods_Shoppinglist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6B4D25E4ECF34C6AD7CF34 /* Pods_Shoppinglist.framework */; };
-		2FBF98391EB2547D00265586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF98381EB2547D00265586 /* AppDelegate.swift */; };
+		2F1E08AF1EB258CA0030B5F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E08AD1EB258CA0030B5F3 /* AppDelegate.swift */; };
+		2F1E08B01EB258CA0030B5F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E08AE1EB258CA0030B5F3 /* GoogleService-Info.plist */; };
 		2FBF983B1EB2547D00265586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF983A1EB2547D00265586 /* ViewController.swift */; };
 		2FBF983E1EB2547D00265586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF983C1EB2547D00265586 /* Main.storyboard */; };
 		2FBF98401EB2547D00265586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF983F1EB2547D00265586 /* Assets.xcassets */; };
@@ -17,13 +18,14 @@
 
 /* Begin PBXFileReference section */
 		138151F6460758A2F4E1BB81 /* Pods-Shoppinglist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppinglist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoppinglist/Pods-Shoppinglist.release.xcconfig"; sourceTree = "<group>"; };
+		2F1E08AD1EB258CA0030B5F3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F1E08AE1EB258CA0030B5F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FBF98351EB2547D00265586 /* Shoppinglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoppinglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FBF98381EB2547D00265586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FBF983A1EB2547D00265586 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2FBF983D1EB2547D00265586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FBF983F1EB2547D00265586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FBF98421EB2547D00265586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2FBF98441EB2547D00265586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FBF98441EB2547D00265586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		3C288FF3C656BC45CDAF9759 /* Pods-Shoppinglist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppinglist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoppinglist/Pods-Shoppinglist.debug.xcconfig"; sourceTree = "<group>"; };
 		BA6B4D25E4ECF34C6AD7CF34 /* Pods_Shoppinglist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoppinglist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -40,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1E08AC1EB258CA0030B5F3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2FBF98441EB2547D00265586 /* Info.plist */,
+				2F1E08AD1EB258CA0030B5F3 /* AppDelegate.swift */,
+				2F1E08AE1EB258CA0030B5F3 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		2FBF982C1EB2547D00265586 = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +73,11 @@
 		2FBF98371EB2547D00265586 /* Shoppinglist */ = {
 			isa = PBXGroup;
 			children = (
-				2FBF98381EB2547D00265586 /* AppDelegate.swift */,
+				2F1E08AC1EB258CA0030B5F3 /* SupportingFiles */,
 				2FBF983A1EB2547D00265586 /* ViewController.swift */,
 				2FBF983C1EB2547D00265586 /* Main.storyboard */,
 				2FBF983F1EB2547D00265586 /* Assets.xcassets */,
 				2FBF98411EB2547D00265586 /* LaunchScreen.storyboard */,
-				2FBF98441EB2547D00265586 /* Info.plist */,
 			);
 			path = Shoppinglist;
 			sourceTree = "<group>";
@@ -123,7 +134,7 @@
 				TargetAttributes = {
 					2FBF98341EB2547D00265586 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 8XG3F6H264;
+						DevelopmentTeam = 27UAPUZGLR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -152,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FBF98431EB2547D00265586 /* LaunchScreen.storyboard in Resources */,
+				2F1E08B01EB258CA0030B5F3 /* GoogleService-Info.plist in Resources */,
 				2FBF98401EB2547D00265586 /* Assets.xcassets in Resources */,
 				2FBF983E1EB2547D00265586 /* Main.storyboard in Resources */,
 			);
@@ -212,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1E08AF1EB258CA0030B5F3 /* AppDelegate.swift in Sources */,
 				2FBF983B1EB2547D00265586 /* ViewController.swift in Sources */,
-				2FBF98391EB2547D00265586 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +349,10 @@
 			baseConfigurationReference = 3C288FF3C656BC45CDAF9759 /* Pods-Shoppinglist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8XG3F6H264;
+				DEVELOPMENT_TEAM = 27UAPUZGLR;
 				INFOPLIST_FILE = Shoppinglist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dev.christopher.eliasson.Shoppinglist;
+				PRODUCT_BUNDLE_IDENTIFIER = se.christophereliasson.shoppinglist.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -351,10 +363,10 @@
 			baseConfigurationReference = 138151F6460758A2F4E1BB81 /* Pods-Shoppinglist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8XG3F6H264;
+				DEVELOPMENT_TEAM = 27UAPUZGLR;
 				INFOPLIST_FILE = Shoppinglist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dev.christopher.eliasson.Shoppinglist;
+				PRODUCT_BUNDLE_IDENTIFIER = se.christophereliasson.shoppinglist.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -379,6 +391,7 @@
 				2FBF98491EB2547D00265586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
