@@ -52,6 +52,120 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		2F1E08B11EB25A470030B5F3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2F1E08B21EB25A470030B5F3 /* Services */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2F1E08B21EB25A470030B5F3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2F1E08B31EB25A470030B5F3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2F1E08B41EB25A470030B5F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F1E08B81EB25A470030B5F3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2F1E08B91EB25A470030B5F3 /* Configuration */,
+				2F1E08BA1EB25A470030B5F3 /* Enums */,
+				2F1E08BB1EB25A470030B5F3 /* Extensions */,
+				2F1E08BC1EB25A470030B5F3 /* Fonts */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2F1E08B91EB25A470030B5F3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2F1E08BA1EB25A470030B5F3 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		2F1E08BB1EB25A470030B5F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F1E08BC1EB25A470030B5F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2F1E08BD1EB25A470030B5F3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2F1E08BE1EB25A470030B5F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F1E08BF1EB25A470030B5F3 /* Components */,
+				2F1E08C01EB25A470030B5F3 /* TableViewCells */,
+				2F1E08C11EB25A470030B5F3 /* TableViewFooters */,
+				2F1E08C21EB25A470030B5F3 /* TableViewHeaders */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2F1E08BF1EB25A470030B5F3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2F1E08C01EB25A470030B5F3 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		2F1E08C11EB25A470030B5F3 /* TableViewFooters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewFooters;
+			sourceTree = "<group>";
+		};
+		2F1E08C21EB25A470030B5F3 /* TableViewHeaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewHeaders;
+			sourceTree = "<group>";
+		};
 		2FBF982C1EB2547D00265586 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +187,12 @@
 		2FBF98371EB2547D00265586 /* Shoppinglist */ = {
 			isa = PBXGroup;
 			children = (
+				2F1E08B11EB25A470030B5F3 /* API */,
+				2F1E08B31EB25A470030B5F3 /* Managers */,
+				2F1E08B41EB25A470030B5F3 /* Models */,
+				2F1E08B81EB25A470030B5F3 /* Utils */,
+				2F1E08BD1EB25A470030B5F3 /* ViewControllers */,
+				2F1E08BE1EB25A470030B5F3 /* Views */,
 				2F1E08AC1EB258CA0030B5F3 /* SupportingFiles */,
 				2FBF983A1EB2547D00265586 /* ViewController.swift */,
 				2FBF983C1EB2547D00265586 /* Main.storyboard */,
