@@ -10,5 +10,7 @@ pod 'PromiseKit', '~> 4.0'
 pod 'XCGLogger', '~> 4.0.0'
 pod 'Firebase/Core', '3.10.0'
 pod 'Firebase/Crash'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
 
 end

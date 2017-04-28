@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
+    var ref: FIRDatabaseReference?
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.ref = FIRDatabase.database().reference()
+    }
+    
+    
+    // MARK: - Actions
+    
+    @IBAction func signup(_ sender: Any) {
+        
+        FIRAuth.auth()?.createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+            self.ref?.child("users").child(user!.uid).child("email").setValue(user!.email)
+        })
+        
     }
 }
 

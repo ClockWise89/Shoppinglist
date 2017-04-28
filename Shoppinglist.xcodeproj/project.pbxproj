@@ -11,9 +11,9 @@
 		2F1E08AF1EB258CA0030B5F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E08AD1EB258CA0030B5F3 /* AppDelegate.swift */; };
 		2F1E08B01EB258CA0030B5F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E08AE1EB258CA0030B5F3 /* GoogleService-Info.plist */; };
 		2FBF983B1EB2547D00265586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF983A1EB2547D00265586 /* ViewController.swift */; };
-		2FBF983E1EB2547D00265586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF983C1EB2547D00265586 /* Main.storyboard */; };
 		2FBF98401EB2547D00265586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF983F1EB2547D00265586 /* Assets.xcassets */; };
 		2FBF98431EB2547D00265586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF98411EB2547D00265586 /* LaunchScreen.storyboard */; };
+		2FC3728C1EB3039200CE88AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF983C1EB2547D00265586 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -285,7 +285,7 @@
 				2FBF98431EB2547D00265586 /* LaunchScreen.storyboard in Resources */,
 				2F1E08B01EB258CA0030B5F3 /* GoogleService-Info.plist in Resources */,
 				2FBF98401EB2547D00265586 /* Assets.xcassets in Resources */,
-				2FBF983E1EB2547D00265586 /* Main.storyboard in Resources */,
+				2FC3728C1EB3039200CE88AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27UAPUZGLR;
 				INFOPLIST_FILE = Shoppinglist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.christophereliasson.shoppinglist.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27UAPUZGLR;
 				INFOPLIST_FILE = Shoppinglist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.christophereliasson.shoppinglist.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
