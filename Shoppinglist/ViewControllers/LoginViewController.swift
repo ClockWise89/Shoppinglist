@@ -41,6 +41,11 @@ class LoginViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.passwordTextField.text = ""
+    }
+    
     fileprivate func styleView() {
         self.view.backgroundColor = UIColor.slColor(.matte)
         
@@ -66,7 +71,6 @@ class LoginViewController: UIViewController {
     }
     
     
-    
     // MARK: - Actions
     
     @IBAction func loginPressed(_ sender: Any) {
@@ -74,22 +78,29 @@ class LoginViewController: UIViewController {
         guard let text = self.emailTextField.text else { return }
         guard let pw = self.passwordTextField.text else { return }
         
-        if text.isValidEmail() {
+        let em = ErrorManager.shared
+        
+        if text == "" || pw == "" {
+            em.presentAlert(title: "Missing information".localized, message: "Fill out both input fields to login.".localized, firstActionTitle: "Try again".localized, presenter: self)
+        } else if text.isValidEmail() {
             
             FIRAuth.auth()?.signIn(withEmail: text, password: pw, completion: { (user, error) in
                 if let error = error {
                     print(error)
                     
-                
+                    // show error
+                    
                 } else if let user = user {
-                    print("Hey user")
+                    
+                    em.presentAlert(title: "Logged in!".localized, message: "Welcome, \(user.email!)".localized, firstActionTitle: "Thanks!".localized, firstActionHandler: { pressed -> Void in
+                        self.performSegue(withIdentifier: Constants.Segue.loginToStart, sender: nil)
+                    }, presenter: self)
                 }
             })
             
         } else {
-            var test = "nonono"
+            em.presentAlert(title: "Invalid e-mail address".localized, message: text + " is not a valid e-mail address.".localized, firstActionTitle: "Try again".localized, presenter: self)
         }
-        
     }
 }
 

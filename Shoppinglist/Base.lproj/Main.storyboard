@@ -120,11 +120,30 @@
                         <outlet property="loginContainerView" destination="vUz-vs-vDm" id="NXW-3d-vM8"/>
                         <outlet property="passwordTextField" destination="lva-Uz-XYf" id="EAb-EO-5p1"/>
                         <outlet property="separatorView" destination="bjd-qJ-2VK" id="TdP-Dm-rIj"/>
+                        <segue destination="AgS-j0-etb" kind="show" identifier="loginToStart" id="IeX-s4-sje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUx-sN-wgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="43.628185907046479"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ucl-yM-DqR">
+            <objects>
+                <viewController id="AgS-j0-etb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PFC-jb-coy"/>
+                        <viewControllerLayoutGuide type="bottom" id="jg3-K5-s3r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lge-wX-q2U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqb-4c-e1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="44"/>
         </scene>
     </scenes>
 </document>
