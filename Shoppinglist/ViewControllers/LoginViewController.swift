@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
     
     @IBOutlet weak var headerLabel: UILabel!
     
     @IBOutlet weak var loginContainerView: UIView!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var loginTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var separatorView: UIView!
     
@@ -40,6 +41,11 @@ class LoginViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.passwordTextField.text = ""
+    }
+    
     fileprivate func styleView() {
         self.view.backgroundColor = UIColor.slColor(.matte)
         
@@ -47,8 +53,8 @@ class LoginViewController: UIViewController {
         self.headerLabel.textColor = UIColor.slColor(.watermelon)
         
         self.loginContainerView.backgroundColor = UIColor.clear
-        self.loginTextField.backgroundColor = UIColor.clear
-        self.loginTextField.textColor = UIColor.slColor(.clean)
+        self.emailTextField.backgroundColor = UIColor.clear
+        self.emailTextField.textColor = UIColor.slColor(.clean)
         
         self.passwordTextField.backgroundColor = UIColor.clear
         self.passwordTextField.textColor = UIColor.slColor(.clean)
@@ -59,16 +65,49 @@ class LoginViewController: UIViewController {
     
     fileprivate func setLabels() {
         self.headerLabel.text = "Shopping List".localized
-        self.loginTextField.placeholder = "E-mail".localized
+        self.emailTextField.placeholder = "E-mail".localized
         self.passwordTextField.placeholder = "Password".localized
         self.loginButton.setTitle("Log in".localized, for: .normal)
     }
     
     
-    
     // MARK: - Actions
     
     @IBAction func loginPressed(_ sender: Any) {
+     
+        guard let text = self.emailTextField.text else { return }
+        guard let pw = self.passwordTextField.text else { return }
         
+        let em = ErrorManager.shared
+        
+        if text == "" || pw == "" {
+            em.presentAlert(title: "Missing information".localized, message: "Fill out both input fields to login.".localized, firstActionTitle: "Try again".localized, presenter: self)
+        } else if text.isValidEmail() {
+            
+            FIRAuth.auth()?.signIn(withEmail: text, password: pw, completion: { (user, error) in
+                if let error = error {
+                    print(error)
+                    
+                    // show error
+                    
+                } else if let user = user {
+                    
+                    em.presentAlert(title: "Logged in!".localized, message: "Welcome, \(user.email!)".localized, firstActionTitle: "Thanks!".localized, firstActionHandler: { pressed -> Void in
+                        self.performSegue(withIdentifier: Constants.Segue.loginToStart, sender: nil)
+                    }, presenter: self)
+                }
+            })
+            
+        } else {
+            em.presentAlert(title: "Invalid e-mail address".localized, message: text + " is not a valid e-mail address.".localized, firstActionTitle: "Try again".localized, presenter: self)
+        }
     }
 }
+
+
+
+
+
+
+
+
