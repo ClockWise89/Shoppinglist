@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		11B312C6C8D4906AEED9678A /* Pods_Shoppinglist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6B4D25E4ECF34C6AD7CF34 /* Pods_Shoppinglist.framework */; };
+		2F1565661EB4873B008F9EC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1565651EB4873B008F9EC7 /* LoginViewController.swift */; };
+		2F15656E1EB49241008F9EC7 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F15656D1EB49241008F9EC7 /* ColorExtension.swift */; };
+		2F1565701EB4957F008F9EC7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F15656F1EB4957F008F9EC7 /* StringExtension.swift */; };
 		2F1E08AF1EB258CA0030B5F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E08AD1EB258CA0030B5F3 /* AppDelegate.swift */; };
 		2F1E08B01EB258CA0030B5F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E08AE1EB258CA0030B5F3 /* GoogleService-Info.plist */; };
 		2FBF983B1EB2547D00265586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF983A1EB2547D00265586 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		138151F6460758A2F4E1BB81 /* Pods-Shoppinglist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppinglist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoppinglist/Pods-Shoppinglist.release.xcconfig"; sourceTree = "<group>"; };
+		2F1565651EB4873B008F9EC7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2F15656D1EB49241008F9EC7 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		2F15656F1EB4957F008F9EC7 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2F1E08AD1EB258CA0030B5F3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F1E08AE1EB258CA0030B5F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FBF98351EB2547D00265586 /* Shoppinglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoppinglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +115,8 @@
 		2F1E08BB1EB25A470030B5F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2F15656D1EB49241008F9EC7 /* ColorExtension.swift */,
+				2F15656F1EB4957F008F9EC7 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 		2F1E08BD1EB25A470030B5F3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F1565651EB4873B008F9EC7 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -344,8 +353,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1565661EB4873B008F9EC7 /* LoginViewController.swift in Sources */,
 				2F1E08AF1EB258CA0030B5F3 /* AppDelegate.swift in Sources */,
+				2F1565701EB4957F008F9EC7 /* StringExtension.swift in Sources */,
 				2FBF983B1EB2547D00265586 /* ViewController.swift in Sources */,
+				2F15656E1EB49241008F9EC7 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
