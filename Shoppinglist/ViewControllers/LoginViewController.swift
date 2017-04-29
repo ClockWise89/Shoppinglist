@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
     
     @IBOutlet weak var headerLabel: UILabel!
     
     @IBOutlet weak var loginContainerView: UIView!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var loginTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var separatorView: UIView!
     
@@ -47,8 +48,8 @@ class LoginViewController: UIViewController {
         self.headerLabel.textColor = UIColor.slColor(.watermelon)
         
         self.loginContainerView.backgroundColor = UIColor.clear
-        self.loginTextField.backgroundColor = UIColor.clear
-        self.loginTextField.textColor = UIColor.slColor(.clean)
+        self.emailTextField.backgroundColor = UIColor.clear
+        self.emailTextField.textColor = UIColor.slColor(.clean)
         
         self.passwordTextField.backgroundColor = UIColor.clear
         self.passwordTextField.textColor = UIColor.slColor(.clean)
@@ -59,7 +60,7 @@ class LoginViewController: UIViewController {
     
     fileprivate func setLabels() {
         self.headerLabel.text = "Shopping List".localized
-        self.loginTextField.placeholder = "E-mail".localized
+        self.emailTextField.placeholder = "E-mail".localized
         self.passwordTextField.placeholder = "Password".localized
         self.loginButton.setTitle("Log in".localized, for: .normal)
     }
@@ -69,6 +70,33 @@ class LoginViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func loginPressed(_ sender: Any) {
+     
+        guard let text = self.emailTextField.text else { return }
+        guard let pw = self.passwordTextField.text else { return }
+        
+        if text.isValidEmail() {
+            
+            FIRAuth.auth()?.signIn(withEmail: text, password: pw, completion: { (user, error) in
+                if let error = error {
+                    print(error)
+                    
+                
+                } else if let user = user {
+                    print("Hey user")
+                }
+            })
+            
+        } else {
+            var test = "nonono"
+        }
         
     }
 }
+
+
+
+
+
+
+
+

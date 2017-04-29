@@ -114,10 +114,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="qMw-5s-s63"/>
                     <connections>
+                        <outlet property="emailTextField" destination="ybU-OT-mQi" id="PE9-Id-kmk"/>
                         <outlet property="headerLabel" destination="gGV-eB-Uaq" id="Pc1-20-Wdp"/>
                         <outlet property="loginButton" destination="j56-Pc-Thw" id="msU-K5-NJv"/>
                         <outlet property="loginContainerView" destination="vUz-vs-vDm" id="NXW-3d-vM8"/>
-                        <outlet property="loginTextField" destination="ybU-OT-mQi" id="bjk-bc-zQu"/>
                         <outlet property="passwordTextField" destination="lva-Uz-XYf" id="EAb-EO-5p1"/>
                         <outlet property="separatorView" destination="bjd-qJ-2VK" id="TdP-Dm-rIj"/>
                     </connections>
